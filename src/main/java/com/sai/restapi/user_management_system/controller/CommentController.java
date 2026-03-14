@@ -1,6 +1,7 @@
 package com.sai.restapi.user_management_system.controller;
 
 import com.sai.restapi.user_management_system.annotations.ServerErrorDoc;
+import com.sai.restapi.user_management_system.annotations.comment.*;
 import com.sai.restapi.user_management_system.exception.CommentNotFoundException;
 import com.sai.restapi.user_management_system.model.Comment;
 import com.sai.restapi.user_management_system.repository.CommentRepository;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/comments")
-@Tag(name = "Comment Controller",description = "Handles operations on comments")
+@Tag(name = "Comment Management Controller",description = "Handles operations on comments")
 @ServerErrorDoc
 public class CommentController {
     private final CommentService commentService;
@@ -28,6 +29,7 @@ public class CommentController {
 
     //-------------Create comment--------------
     @PostMapping("/create")
+    @CreateCommentDoc
     public ResponseEntity<Comment> createComment(Comment comment){
         Comment cmt = commentService.createComment(comment);
         return ResponseEntity.ok(cmt);
@@ -36,6 +38,7 @@ public class CommentController {
 
     //-----------Get All Comments-----------------
     @GetMapping("/getall")
+    @GetAllCommentsDoc
     public ResponseEntity<List<Comment>> getAllComments(){
         List<Comment> list = commentService.getAllComments();
         return ResponseEntity.ok(list);
@@ -43,6 +46,7 @@ public class CommentController {
 
     //--------Get Comment By ID--------------------
     @GetMapping("/getbyid")
+    @GetCommentByIdDoc
     public ResponseEntity<Comment> getCommentById(Integer id){
         Comment comment = commentService.getCommentById(id);
         return ResponseEntity.ok(comment);
@@ -50,6 +54,7 @@ public class CommentController {
 
     //--------------Update Comment By Id--------------
     @PatchMapping("/update")
+    @UpdateCommentByIdDoc
     public ResponseEntity<Comment> updateCommentById(Comment cmt1, Integer id){
         Comment cmt2 = commentRepository.findById(id).orElseThrow(() -> new CommentNotFoundException(id));
         cmt2.setContent(cmt1.getContent());
@@ -60,6 +65,7 @@ public class CommentController {
 
     //--------------Delete Comment By ID---------------
     @DeleteMapping("/delete")
+    @DeleteCommentByIdDoc
     public ResponseEntity<DeleteResponse> deleteCommentById(Integer id){
         commentService.deleteComment(id);
         return ResponseEntity.ok(new DeleteResponse("204","Comment deleted successfully"));

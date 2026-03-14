@@ -21,8 +21,11 @@ public class ProjectExamples {
                     }
                     """;
 
-    public static final String PROJECT_UPDATE = """
-            
+    public static final String PROJECT204 = """
+            {
+              "response": "204",
+              "description": "Project deleted successfully"
+            }
             """;
 
     public static final String PROJECT_LIST = """
