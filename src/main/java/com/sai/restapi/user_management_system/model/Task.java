@@ -5,12 +5,10 @@ import com.sai.restapi.user_management_system.utility.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

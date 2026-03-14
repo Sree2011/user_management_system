@@ -1,17 +1,15 @@
 package com.sai.restapi.user_management_system.service;
 
 import com.sai.restapi.user_management_system.exception.ProjectNotFoundException;
-import com.sai.restapi.user_management_system.exception.UserNotFoundException;
+
 import com.sai.restapi.user_management_system.model.Project;
 import com.sai.restapi.user_management_system.repository.ProjectRepository;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
 public class ProjectService {
-    private ProjectRepository projectRepository;
+    private final ProjectRepository projectRepository;
 
     public ProjectService(ProjectRepository repository) {
         this.projectRepository = repository;
@@ -41,14 +39,8 @@ public class ProjectService {
     //-----------------Update project by id-----------------
     public Project updateProjectById(Project updatedProject, Integer id) throws ProjectNotFoundException{
         Project existingproject = projectRepository.findById(id).orElseThrow(() -> new ProjectNotFoundException(id) );
-        System.out.println("existing project: ");
-        System.out.println(existingproject.toString());
         existingproject.setName(updatedProject.getName());
-
         existingproject.setDescription(updatedProject.getDescription());
-        System.out.println("existing project: ");
-        System.out.println(existingproject.toString());
-
         return projectRepository.save(existingproject);
     }
 

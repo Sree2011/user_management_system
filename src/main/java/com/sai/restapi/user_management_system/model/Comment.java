@@ -3,11 +3,9 @@ package com.sai.restapi.user_management_system.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@ToString
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

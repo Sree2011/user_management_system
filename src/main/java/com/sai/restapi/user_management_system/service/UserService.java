@@ -3,16 +3,13 @@ package com.sai.restapi.user_management_system.service;
 import com.sai.restapi.user_management_system.exception.UserNotFoundException;
 import com.sai.restapi.user_management_system.model.User;
 import com.sai.restapi.user_management_system.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
