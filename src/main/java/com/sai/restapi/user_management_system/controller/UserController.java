@@ -2,12 +2,13 @@ package com.sai.restapi.user_management_system.controller;
 
 import com.sai.restapi.user_management_system.annotations.*;
 
+import com.sai.restapi.user_management_system.annotations.user.*;
 import com.sai.restapi.user_management_system.exception.UserNotFoundException;
 import com.sai.restapi.user_management_system.model.User;
 import com.sai.restapi.user_management_system.service.UserService;
+import com.sai.restapi.user_management_system.utility.DeleteResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,7 +39,7 @@ public class UserController {
 
     @GetMapping("/getbyid")
     @Operation(summary="Get User by id")
-    @GetAllUserDoc
+    @GetUserByIdDoc
     public ResponseEntity<User> getUserById(@RequestParam Integer userId) throws UserNotFoundException {
         User user = service.getUserById(userId);
         return ResponseEntity.ok(user);
@@ -55,7 +56,7 @@ public class UserController {
 
 
     //------------------------------Update user by id--------------------
-    @PutMapping("/update")
+    @PatchMapping("/update")
     @UpdateUserDoc
     public ResponseEntity<User> updateUserById(@RequestBody User updatedUser,  @RequestParam Integer id) throws UserNotFoundException{
         User existingUser = service.updateUserById(updatedUser, id);
@@ -66,9 +67,9 @@ public class UserController {
     //------------------------Delete user by id-------------------------
     @DeleteMapping("/deletebyid")
     @DeleteUserDoc
-    public ResponseEntity<String> deleteUserById(@RequestParam Integer id) throws UserNotFoundException{
+    public ResponseEntity<DeleteResponse> deleteUserById(@RequestParam Integer id) throws UserNotFoundException{
         service.deleteUser(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(new DeleteResponse("204","User deleted successfully"));
     }
 
 

@@ -1,6 +1,6 @@
-package com.sai.restapi.user_management_system.annotations;
+package com.sai.restapi.user_management_system.annotations.user;
 
-import com.sai.restapi.user_management_system.enums.SwaggerExamples;
+import com.sai.restapi.user_management_system.utility.UserExamples;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -22,7 +22,7 @@ import java.lang.annotation.Target;
         content = @Content(
                 examples = @ExampleObject(
                         name = "User Create Request",
-                        value = SwaggerExamples.USER_REQUEST
+                        value = UserExamples.USER_REQUEST
                 )
         )
 )
@@ -31,7 +31,7 @@ import java.lang.annotation.Target;
         @ApiResponse(responseCode = "200",
                 content= @Content(examples = @ExampleObject(
                         name="user_input_1",
-                        value = SwaggerExamples.USER200))
+                        value = UserExamples.USER200))
         ))
 public @interface CreateUserDoc {
 }

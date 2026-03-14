@@ -1,16 +1,16 @@
 package com.sai.restapi.user_management_system.model;
 
-import com.sai.restapi.user_management_system.enums.Priority;
-import com.sai.restapi.user_management_system.enums.Status;
+import com.sai.restapi.user_management_system.utility.Priority;
+import com.sai.restapi.user_management_system.utility.Status;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor

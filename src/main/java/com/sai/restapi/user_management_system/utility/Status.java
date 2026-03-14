@@ -1,4 +1,4 @@
-package com.sai.restapi.user_management_system.enums;
+package com.sai.restapi.user_management_system.utility;
 
 public enum Status {
     TODO,

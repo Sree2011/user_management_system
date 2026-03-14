@@ -1,28 +1,27 @@
 package com.sai.restapi.user_management_system.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer project_id;
+    private Integer projectId;
 
     private String name;
 
     private String description;
-
-    private LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -30,6 +29,9 @@ public class Project {
 
     @OneToMany(mappedBy = "project")
     private List<Task> tasks;
+
+
+
 
 
 }

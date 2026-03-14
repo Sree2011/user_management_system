@@ -1,6 +1,6 @@
-package com.sai.restapi.user_management_system.annotations;
+package com.sai.restapi.user_management_system.annotations.user;
 
-import com.sai.restapi.user_management_system.enums.SwaggerExamples;
+import com.sai.restapi.user_management_system.utility.UserExamples;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Operation(summary = "Delete a user by id")
 @ApiResponse(responseCode = "204",description = "Successfully deleted",
-    content = @Content(examples = {@ExampleObject(name = "USER204", value= SwaggerExamples.USER204)}))
+    content = @Content(examples = {@ExampleObject(name = "USER204", value= UserExamples.USER204)}))
 public @interface DeleteUserDoc {
 }

@@ -1,7 +1,6 @@
-package com.sai.restapi.user_management_system.annotations;
+package com.sai.restapi.user_management_system.annotations.user;
 
-import com.sai.restapi.user_management_system.enums.SwaggerExamples;
-import io.swagger.v3.oas.annotations.Operation;
+import com.sai.restapi.user_management_system.utility.UserExamples;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -21,7 +20,7 @@ import java.lang.annotation.Target;
                 content = @Content(
                         examples = @ExampleObject(
                                 name = "user_list_example",
-                                value = SwaggerExamples.USER200
+                                value = UserExamples.USER_LIST
                         )
                 )
         )
