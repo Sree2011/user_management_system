@@ -30,7 +30,6 @@ public class Task {
     @Enumerated(EnumType.STRING)
     private Priority priority;
 
-    private Date dueDate;
 
     @ManyToOne
     @JoinColumn(name = "project_id")

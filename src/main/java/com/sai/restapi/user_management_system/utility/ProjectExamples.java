@@ -1,6 +1,7 @@
 package com.sai.restapi.user_management_system.utility;
 
 public class ProjectExamples {
+    private ProjectExamples(){};
 
     public static final String PROJECT200 = """
 {

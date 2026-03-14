@@ -21,7 +21,7 @@ import java.lang.annotation.Target;
                         content = @Content(examples = @ExampleObject(name = "500 error", value = UserExamples.USER500))),
 
                         @ApiResponse(responseCode = "404",
-                                description = "User Not Found",
+                                description = "Not Found",
                                 content = @Content(examples = @ExampleObject(name = "404 example", value = UserExamples.USER404)))
                 }
 )

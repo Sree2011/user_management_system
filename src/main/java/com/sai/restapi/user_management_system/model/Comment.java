@@ -18,8 +18,6 @@ public class Comment {
 
     private String content;
 
-    private LocalDateTime createdAt;
-
     @ManyToOne
     @JoinColumn(name = "task_id")
     private Task task;
@@ -27,6 +25,7 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "author_id")
     private User author;
+
 
 
 }
