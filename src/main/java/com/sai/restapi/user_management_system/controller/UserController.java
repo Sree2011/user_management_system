@@ -1,9 +1,6 @@
 package com.sai.restapi.user_management_system.controller;
 
-import com.sai.restapi.user_management_system.annotations.CreateUserDoc;
-import com.sai.restapi.user_management_system.annotations.GetAllUserDoc;
-import com.sai.restapi.user_management_system.annotations.ServerErrorDoc;
-import com.sai.restapi.user_management_system.annotations.UpdateUserDoc;
+import com.sai.restapi.user_management_system.annotations.*;
 
 import com.sai.restapi.user_management_system.exception.UserNotFoundException;
 import com.sai.restapi.user_management_system.model.User;
@@ -34,15 +31,17 @@ public class UserController {
     @GetMapping("/getall")
     @Operation(summary = "Get All Users")
     @GetAllUserDoc
-    public List<User> getAllUsers(){
-        return service.getAllUsers();
+    public ResponseEntity<List<User>> getAllUsers(){
+        List<User> ss = service.getAllUsers();
+        return ResponseEntity.ok(ss);
     }
 
     @GetMapping("/getbyid")
     @Operation(summary="Get User by id")
     @GetAllUserDoc
-    public User getUserById(@RequestParam Integer userId) throws UserNotFoundException {
-        return service.getUserById(userId);
+    public ResponseEntity<User> getUserById(@RequestParam Integer userId) throws UserNotFoundException {
+        User user = service.getUserById(userId);
+        return ResponseEntity.ok(user);
     }
 
 
@@ -58,14 +57,19 @@ public class UserController {
     //------------------------------Update user by id--------------------
     @PutMapping("/update")
     @UpdateUserDoc
-    public User updateUserById(@RequestBody User updatedUser,  @RequestParam Integer id) throws UserNotFoundException{
-        return service.updateUserById(updatedUser, id);
+    public ResponseEntity<User> updateUserById(@RequestBody User updatedUser,  @RequestParam Integer id) throws UserNotFoundException{
+        User existingUser = service.updateUserById(updatedUser, id);
+        return ResponseEntity.ok(existingUser);
     }
 
 
-
-
-
+    //------------------------Delete user by id-------------------------
+    @DeleteMapping("/deletebyid")
+    @DeleteUserDoc
+    public ResponseEntity<String> deleteUserById(@RequestParam Integer id) throws UserNotFoundException{
+        service.deleteUser(id);
+        return ResponseEntity.noContent().build();
+    }
 
 
 }

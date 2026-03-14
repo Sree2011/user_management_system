@@ -17,6 +17,7 @@ public final class SwaggerExamples {
             "  \"comments\": null\n" +
             "}";
     public static final String USER404 = "{\n\"error\":\"404\",\n" + "\"description\":\"user not found\"\n}";
+    public static final String USER204 = "{\n\"RESPONSE\":\"204\",\n" + "\"description\":\"Deleted Successfully\"\n}";
     public static final String PROJECT_EXAMPLE =
             "{ \"title\": \"AI Project\", \"description\": \"GenAI backend system\" }";
 

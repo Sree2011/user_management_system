@@ -27,9 +27,13 @@ public class UserService {
     public User saveUser(User user) {
         return userRepository.save(user);
     }
-    public void deleteUser(Integer id){
+    public void deleteUser(Integer id) throws UserNotFoundException{
+        if (!userRepository.existsById(id)) {
+            throw new UserNotFoundException(id);
+        }
         userRepository.deleteById(id);
     }
+
 
     public User updateUserById(User updatedUser, Integer id) throws UserNotFoundException{
         return userRepository.findById(id)
