@@ -10,6 +10,5 @@ import lombok.*;
 public class CommentWithAuthorDTO {
     private Integer commentId;
     private String content;
-    private Integer taskId;
     private UserDTO author;  // nested DTO instead of just authorId
 }

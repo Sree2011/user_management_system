@@ -12,6 +12,5 @@ public class ProjectWithTasksDTO {
     private Integer projectId;
     private String name;
     private String description;
-    private Integer ownerId;
     private List<TaskDTO> tasks;  // nested DTOs
 }

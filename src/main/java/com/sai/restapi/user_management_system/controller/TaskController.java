@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/tasks")
 @ServerErrorDoc
-@Tag(name = "Task Management Controller", description = "Handles operations on tasks")
+@Tag(name = "3. Task Management Controller", description = "Handles operations on tasks")
 public class TaskController {
 
     private final TaskService service;

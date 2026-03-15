@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/users")
 @ServerErrorDoc
-@Tag(name = "User Management Controller", description = "Handles operations on users")
+@Tag(name = "1. User Management Controller", description = "Handles operations on users")
 public class UserController {
 
     private final UserService service;

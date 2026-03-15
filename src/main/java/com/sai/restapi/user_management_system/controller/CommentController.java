@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/comments")
-@Tag(name = "Comment Management Controller", description = "Handles operations on comments")
+@Tag(name = "4. Comment Management Controller", description = "Handles operations on comments")
 @ServerErrorDoc
 public class CommentController {
 

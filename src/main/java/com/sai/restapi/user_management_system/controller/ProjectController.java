@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @ServerErrorDoc
-@Tag(name = "Project Management Controller", description = "Manages operations on projects")
+@Tag(name = "2. Project Management Controller", description = "Handles operations on projects")
 @RequestMapping("/projects")
 public class ProjectController {
 
