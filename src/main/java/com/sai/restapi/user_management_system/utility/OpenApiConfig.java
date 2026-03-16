@@ -21,12 +21,12 @@ public class OpenApiConfig {
                         .version("1.0.0")
                         .description("REST API for managing users, projects, tasks, and comments with nested DTOs")
                         .contact(new Contact()
-                                .name("Nandini")
-                                .email("nandini@example.com")
-                                .url("https://github.com/nandini"))
+                                .name("Sree Sai Nandini Gundraju")
+                                .email("gundrajusreesainandini@gmail.com")
+                                .url("https://github.com/Sree2011"))
                         .license(new License()
                                 .name("Apache 2.0")
-                                .url("http://springdoc.org")))
+                                .url("https://springdoc.org")))
                 .tags(List.of(
                         new Tag().name("1. User Management Controller").description("Handles operations on users"),
                         new Tag().name("2. Project Management Controller").description("Handles operations on projects"),
@@ -35,8 +35,8 @@ public class OpenApiConfig {
                         new Tag().name("5. Task With User Controller").description("Handles operations common to task and user"),
                         new Tag().name("6. User With Project Controller").description("Handles operations common to user and project"),
                         new Tag().name("7. Project With Task Controller").description("Handles operations common to project and task"),
-                        new Tag().name("8. Task With Comment Controller").description("Handles operations common to task and comment")
-//                        new Tag().name("9. Comment With Author Controller").description("Handles operations common to comment and author")
+                        new Tag().name("8. Task With Comment Controller").description("Handles operations common to task and comment"),
+                        new Tag().name("9. Comment With Author Controller").description("Handles operations common to comment and author")
                 ));
     }
 }

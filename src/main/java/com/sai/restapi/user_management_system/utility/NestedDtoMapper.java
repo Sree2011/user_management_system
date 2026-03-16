@@ -1,6 +1,6 @@
 package com.sai.restapi.user_management_system.utility;
 
-import com.sai.restapi.user_management_system.dto.*;
+import com.sai.restapi.user_management_system.dto.nested.*;
 import com.sai.restapi.user_management_system.model.*;
 
 import java.util.stream.Collectors;

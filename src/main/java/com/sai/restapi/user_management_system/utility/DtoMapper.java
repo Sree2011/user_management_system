@@ -1,7 +1,10 @@
 package com.sai.restapi.user_management_system.utility;
 
+import com.sai.restapi.user_management_system.dto.individual.CommentDTO;
+import com.sai.restapi.user_management_system.dto.individual.ProjectDTO;
+import com.sai.restapi.user_management_system.dto.individual.TaskDTO;
+import com.sai.restapi.user_management_system.dto.individual.UserDTO;
 import com.sai.restapi.user_management_system.model.*;
-import com.sai.restapi.user_management_system.dto.*;
 
 import java.util.stream.Collectors;
 
