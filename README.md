@@ -1,7 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true, theme: 'default' });
-</script>
+
 
 Here’s a polished **README.md** draft for your **User Management System** project. It’s recruiter‑friendly, highlights your architectural choices, and sets up future improvements clearly:
 
@@ -96,3 +93,9 @@ erDiagram
 
 ## 🔗 Repository
 [GitHub - User Management System](https://github.com/Sree2011/user_management_system)
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+</script>
