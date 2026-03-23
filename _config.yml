@@ -23,7 +23,7 @@ include:
 remote_theme: pages-themes/dinky
 markdown: kramdown
 kramdown:
-  input: kramdown
+  input: Kramdown
   auto_ids: true
 
 
