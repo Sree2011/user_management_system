@@ -20,32 +20,6 @@ This project demonstrates clean architecture, centralized exception handling, an
 
 ---
 
-## Architecture Diagram
-
-<pre class="mermaid">
-architecture-beta
-    group backend(cloud)[User Management System]
-
-    service client(actor)[Client] in backend
-    service controller(control)[Controller] in backend
-    service service_svc(control)[Service] in backend
-    service dto(entity)[DTO] in backend
-    service repository(database)[Repository] in backend
-    service db(database)[Database] in backend
-
-    client:R --> L:controller
-    controller:R --> L:service_svc
-    service_svc:R --> L:dto
-    dto:R --> L:repository
-    repository:R --> L:db
-    db:L --> R:repository
-    repository:L --> R:dto
-    dto:L --> R:service_svc
-    service_svc:L --> R:controller
-    controller:L --> R:client
-
-</pre>
-
 ## Entity Diagram
 
 <pre class="mermaid">
@@ -92,6 +66,7 @@ erDiagram
 </pre>
 
 ## 🚀 Future Enhancements
+- Add **nested controller endpoints**
 - Add **unit and integration tests** with **SonarQube coverage reports**.
 - Implement **authentication & authorization** using **Spring Security + JWT**.
 - Extend role-based access control for fine-grained permissions.
@@ -111,10 +86,10 @@ erDiagram
 
 ## 📖 API Examples
 - **Get User by ID**  
-  `GET /users/{id}`  
+  `GET /users/{id}/getbyid/`  
 
-- **Assign Role to User**  
-  `POST /users/{id}/roles`  
+- **Get Component by ID**  
+  `GET /components/{id}/getbyid/` 
 
 ---
 
