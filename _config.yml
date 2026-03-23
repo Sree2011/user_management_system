@@ -7,7 +7,7 @@ url: "https://your-username.github.io"
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
