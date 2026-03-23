@@ -1,5 +1,5 @@
-title: Line Flows and Line Losses
-description: This project calculates the line flows and line losses with the given data
+title: User Mamagement System
+description: This project uses spring boot data jpa to assign and manage tasks for a user
 
 plugins:
   - jekyll-relative-links
@@ -26,9 +26,9 @@ kramdown:
   auto_ids: true
 
 
-mermaid:
-  enable: true
-  version: 11.4.1
+# mermaid:
+#   enable: true
+#   version: 11.4.1
 
 mathjax:
   enable: true
