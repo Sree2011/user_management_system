@@ -1,4 +1,7 @@
-
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+</script>
 
 Here’s a polished **README.md** draft for your **User Management System** project. It’s recruiter‑friendly, highlights your architectural choices, and sets up future improvements clearly:
 
@@ -19,10 +22,11 @@ This project demonstrates clean architecture, centralized exception handling, an
 - **Maintainability**: Lombok used to reduce boilerplate and improve readability.
 
 ---
+
 ## Entity Diagram
 <!-- ![Entity Relationship diagram](image.png) -->
 
-```mermaid
+<pre class="mermaid">
 erDiagram
     USER {
         int user_id PK
@@ -63,7 +67,7 @@ erDiagram
     TASK ||--o{ COMMENT : "has"
     USER ||--o{ COMMENT : "authors"
 
-```
+</pre>
 
 ## 🚀 Future Enhancements
 - Add **unit and integration tests** with **SonarQube coverage reports**.
@@ -96,7 +100,3 @@ erDiagram
 [GitHub - User Management System](https://github.com/Sree2011/user_management_system)
 
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true, theme: 'default' });
-</script>
