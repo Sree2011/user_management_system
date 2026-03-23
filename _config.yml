@@ -20,7 +20,7 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
 
-# remote_theme: mmistakes/minimal-mistakes
+remote_theme: bamr87/zer0-mistakes
 markdown: kramdown
 kramdown:
   input: GFM
