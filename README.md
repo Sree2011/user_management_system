@@ -1,6 +1,8 @@
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
 </script>
+
 Here’s a polished **README.md** draft for your **User Management System** project. It’s recruiter‑friendly, highlights your architectural choices, and sets up future improvements clearly:
 
 
@@ -82,16 +84,6 @@ erDiagram
 
 ---
 
-## 📂 Project Structure
-```mermaid
-graph TD
-    User[User] --> Project[Project]
-    Project --> Task[Task]
-    User --> Task
-    Task --> Comment[Comment]
-    User --> Comment
-```
----
 
 ## 📖 API Examples
 - **Get User by ID**  

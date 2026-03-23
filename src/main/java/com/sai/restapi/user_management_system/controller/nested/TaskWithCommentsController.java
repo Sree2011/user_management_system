@@ -1,8 +1,6 @@
 package com.sai.restapi.user_management_system.controller.nested;
 
-import com.sai.restapi.user_management_system.dto.individual.TaskDTO;
 import com.sai.restapi.user_management_system.dto.nested.TaskWithCommentsDTO;
-import com.sai.restapi.user_management_system.model.Comment;
 import com.sai.restapi.user_management_system.service.nested.TaskWithCommentService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
