@@ -15,8 +15,5 @@ public class TaskDTO {
     private String description;
     private String status;       // flattened from Status enum
     private String priority;     // flattened from Priority enum
-    private Date dueDate;        // optional if you want deadlines
-    private Integer projectId;   // instead of full Project entity
-    private Integer assignedTo;  // instead of full User entity
-    private List<Integer> commentIds; // instead of full Comment list
+
 }

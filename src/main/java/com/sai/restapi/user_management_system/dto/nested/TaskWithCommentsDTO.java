@@ -15,7 +15,7 @@ public class TaskWithCommentsDTO {
     private Integer taskId;
     private String title;
     private String description;
-    private Status status;
-    private Priority priority;
+    private String status;
+    private String priority;
     private List<CommentDTO> comments;  // nested DTOs
 }

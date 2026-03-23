@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "projects")
 public class Project {
 
     @Id
@@ -23,7 +24,7 @@ public class Project {
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @OneToMany(mappedBy = "project")
+    @OneToMany(mappedBy = "project", fetch = FetchType.EAGER)
     private List<Task> tasks;
 
 

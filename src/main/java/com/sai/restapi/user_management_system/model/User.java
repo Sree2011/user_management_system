@@ -4,6 +4,7 @@ package com.sai.restapi.user_management_system.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -11,6 +12,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name="users")
 public class User {
 
     @Id
@@ -24,11 +26,11 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "owner")
-    private List<Project> projects;
+    private List<Project> projects = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
-    private List<Task> tasks;
+    private List<Task> tasks = new ArrayList<>();
 
     @OneToMany(mappedBy = "author")
-    private List<Comment> comments;
+    private List<Comment> comments = new ArrayList<>();
 }

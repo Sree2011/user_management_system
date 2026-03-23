@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 public class CommentDTO {
     private Integer commentId;
     private String content;
-    private LocalDateTime createdAt;
-    private Integer taskId;    // instead of full Task entity
-    private Integer authorId;  // instead of full User entity
+//    private Integer taskId;    // instead of full Task entity
+//    private Integer authorId;  // instead of full User entity
 }

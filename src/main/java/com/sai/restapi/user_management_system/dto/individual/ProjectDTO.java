@@ -15,8 +15,5 @@ public class ProjectDTO {
         private Integer projectId;
         private String name;
         private String description;
-        private LocalDateTime createdAt;
-        private Integer ownerId;        // instead of full User entity
-        private List<Integer> taskIds;  // instead of full Task list
 }
 

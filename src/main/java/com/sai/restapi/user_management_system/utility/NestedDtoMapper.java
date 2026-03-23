@@ -39,10 +39,13 @@ public class NestedDtoMapper {
                 task.getTask_id(),
                 task.getTitle(),
                 task.getDescription(),
-                task.getPriority() != null ? Status.valueOf(task.getPriority().name()) : null, // enum → string
-                task.getStatus() != null ? Priority.valueOf(task.getStatus().name()) : null,     // enum → string
-                task.getComments() != null ? task.getComments().stream()
-                        .map(DtoMapper::toCommentDTO).collect(Collectors.toList()) : null
+                task.getPriority() != null ? task.getPriority().name() : null, // enum → string
+                task.getStatus() != null ? task.getStatus().name() : null,     // enum → string
+                task.getComments() != null
+                        ? task.getComments().stream()
+                        .map(DtoMapper::toCommentDTO)
+                        .collect(Collectors.toList())
+                        : null
         );
     }
     //------------------Task with User----------------------------
