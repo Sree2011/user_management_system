@@ -1,45 +1,35 @@
-# Site settings
-title: Task Management System
-description: >
-  Documentation and portfolio showcase for the Task Management System project.
-baseurl: "" 
-url: "https://your-username.github.io"
+title: Library Book Management System
+description: Manages adding,issuing,searching and returning of books in a library.
 
-# Build settings
-markdown: kramdown
-theme: cayman
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
-# Enable Mermaid diagrams
+
+relative_links:
+  enabled: true
+  collections: true
+include:
+ - CONTRIBUTING.md
+  - README.md
+  - LICENSE.md
+  - COPYING.md
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - ISSUE_TEMPLATE.md
+  - PULL_REQUEST_TEMPLATE.md
+
+remote_theme: just-the-docs/just-the-docs
+
+#theme: minimal-mistakes-jekyll
 mermaid:
-  enable: true
-  version: "11.13.0"   # specify Mermaid.js version
-  initialize: |
-    {
-      startOnLoad: true,
-      theme: 'default',
-      securityLevel: 'loose'
-    }
+  enabled: true
+  version: "11.2.0"
 
-# Author info
-author:
-  name: Nandini
-  email: nandinigundraju639@gmail.com
-
-# Navigation links
-# nav:
-#   - title: "Home"
-#     url: /
-#   - title: "Architecture"
-#     url: /architecture/
-#   - title: "ERD"
-#     url: /erd/
-#   - title: "Docs"
-#     url: /docs/
-
-# exclude:
-#   - README.md
-#   - Gemfile
-#   - Gemfile.lock
+  
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge

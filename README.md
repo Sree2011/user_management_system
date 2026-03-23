@@ -81,33 +81,13 @@ erDiagram
 
 ## 📂 Project Structure
 ```
-mindmap
-  root((User Management System))
-    Client
-      ::icon(fa fa-user)
-      Sends API request
-    Controller
-      ::icon(fa fa-sliders)
-      Handles requests
-      Exception Handling
-      Swagger Docs
-    Service
-      ::icon(fa fa-briefcase)
-      Business logic
-      Utility
-      Lombok
-      Swagger Docs
-    DTO
-      ::icon(fa fa-exchange)
-      Transfers data
-      Swagger Docs
-    Repository
-      ::icon(fa fa-folder)
-      Persistence layer
-      Swagger Docs
-    Database
-      ::icon(fa fa-database)
-      CRUD operations
+flowchart TD
+    User[User] --> Project[Project]
+    Project --> Task[Task]
+    User --> Task
+    Task --> Comment[Comment]
+    User --> Comment
+
 ```
 ---
 
