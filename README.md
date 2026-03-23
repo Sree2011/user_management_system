@@ -18,7 +18,7 @@ This project demonstrates clean architecture, centralized exception handling, an
 
 ---
 ## Entity Diagram
-```
+```mermaid
 erDiagram
     USER {
         int user_id PK
@@ -80,7 +80,7 @@ erDiagram
 ---
 
 ## 📂 Project Structure
-```
+```mermaid
 flowchart TD
     User[User] --> Project[Project]
     Project --> Task[Task]
