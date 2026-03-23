@@ -63,7 +63,6 @@ erDiagram
     TASK ||--o{ COMMENT : "has"
     USER ||--o{ COMMENT : "authors"
 
-
 ```
 
 ## 🚀 Future Enhancements
