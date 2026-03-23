@@ -1,3 +1,6 @@
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+</script>
 Here’s a polished **README.md** draft for your **User Management System** project. It’s recruiter‑friendly, highlights your architectural choices, and sets up future improvements clearly:
 
 
