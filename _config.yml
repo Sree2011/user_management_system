@@ -1,4 +1,4 @@
-title: User Mamagement System
+title: User Task Management System
 description: This project uses spring boot data jpa to assign and manage tasks for a user
 
 plugins:
