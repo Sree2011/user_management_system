@@ -36,27 +36,34 @@ This project demonstrates clean architecture, centralized exception handling, an
 ---
 
 ## 📂 Project Structure
-```mermaid
-architecture-beta
-    group backend(cloud)[User Management System]
-
-    service client(actor)[Client] in backend
-    service controller(control)[Controller] in backend
-    service service_svc(control)[Service] in backend
-    service dto(entity)[DTO] in backend
-    service repository(database)[Repository] in backend
-    service db(database)[Database] in backend
-
-    client:R --> L:controller
-    controller:R --> L:service_svc
-    service_svc:R --> L:dto
-    dto:R --> L:repository
-    repository:R --> L:db
-    db:L --> R:repository
-    repository:L --> R:dto
-    dto:L --> R:service_svc
-    service_svc:L --> R:controller
-    controller:L --> R:client
+```
+mindmap
+  root((User Management System))
+    Client
+      ::icon(fa fa-user)
+      Sends API request
+    Controller
+      ::icon(fa fa-sliders)
+      Handles requests
+      Exception Handling
+      Swagger Docs
+    Service
+      ::icon(fa fa-briefcase)
+      Business logic
+      Utility
+      Lombok
+      Swagger Docs
+    DTO
+      ::icon(fa fa-exchange)
+      Transfers data
+      Swagger Docs
+    Repository
+      ::icon(fa fa-folder)
+      Persistence layer
+      Swagger Docs
+    Database
+      ::icon(fa fa-database)
+      CRUD operations
 ```
 ---
 
