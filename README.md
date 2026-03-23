@@ -20,6 +20,8 @@ This project demonstrates clean architecture, centralized exception handling, an
 
 ---
 ## Entity Diagram
+<!-- ![Entity Relationship diagram](image.png) -->
+
 ```mermaid
 erDiagram
     USER {
