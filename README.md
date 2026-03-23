@@ -84,13 +84,12 @@ erDiagram
 
 ## 📂 Project Structure
 ```mermaid
-flowchart TD
+graph TD
     User[User] --> Project[Project]
     Project --> Task[Task]
     User --> Task
     Task --> Comment[Comment]
     User --> Comment
-
 ```
 ---
 
