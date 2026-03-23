@@ -17,6 +17,50 @@ This project demonstrates clean architecture, centralized exception handling, an
 - **Maintainability**: Lombok used to reduce boilerplate and improve readability.
 
 ---
+## Entity Diagram
+```
+erDiagram
+    USER {
+        int user_id PK
+        string name
+        string email
+    }
+
+    PROJECT {
+        int project_id PK
+        string name
+        string description
+        datetime created_at
+        int owner_id FK
+    }
+
+    TASK {
+        int task_id PK
+        string title
+        string description
+        string status
+        string priority
+        datetime due_date
+        int project_id FK
+        int assigned_to FK
+    }
+
+    COMMENT {
+        int comment_id PK
+        string content
+        datetime created_at
+        int task_id FK
+        int author_id FK
+    }
+
+    USER ||--o{ PROJECT : "owns"
+    PROJECT ||--o{ TASK : "has"
+    USER ||--o{ TASK : "assigned"
+    TASK ||--o{ COMMENT : "has"
+    USER ||--o{ COMMENT : "authors"
+
+
+```
 
 ## 🚀 Future Enhancements
 - Add **unit and integration tests** with **SonarQube coverage reports**.
