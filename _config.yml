@@ -1,0 +1,45 @@
+# Site settings
+title: Task Management System
+description: >
+  Documentation and portfolio showcase for the Task Management System project.
+baseurl: "" 
+url: "https://your-username.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Enable Mermaid diagrams
+mermaid:
+  enable: true
+  version: "11.13.0"   # specify Mermaid.js version
+  initialize: |
+    {
+      startOnLoad: true,
+      theme: 'default',
+      securityLevel: 'loose'
+    }
+
+# Author info
+author:
+  name: Nandini
+  email: nandinigundraju639@gmail.com
+
+# Navigation links
+# nav:
+#   - title: "Home"
+#     url: /
+#   - title: "Architecture"
+#     url: /architecture/
+#   - title: "ERD"
+#     url: /erd/
+#   - title: "Docs"
+#     url: /docs/
+
+# exclude:
+#   - README.md
+#   - Gemfile
+#   - Gemfile.lock
